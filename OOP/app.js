@@ -73,3 +73,53 @@
 // const poliTicatri = new politicar("Vucic", 53, true)
 
 // poliTicatri.da_li_je_na_vlasti()
+
+class Species{
+    constructor(name, kg){
+        this.name = name
+        this.kg = kg
+    }
+    wakeUp(){
+        return `${this.name} wake up in the morning.`;
+    }
+    eat(){
+        return `${this.name} they eat leaves, roots, tree bark, grass and fruit.`;
+    }
+    sleep(){
+        return `${this.name} they sleep at night.`;
+    }
+    braking(){
+        return`${this.name} every day.`
+    }
+}
+
+class Elephant extends Species{
+    constructor(name, kg){
+        super(name, kg)
+    }
+
+    dailyRoutine(){
+        return`${super.wakeUp()} then ${super.eat()} and then ${super.sleep()}.`
+    }
+}
+
+const display = (content) => {
+    console.log(content);
+}
+const elephant = new Elephant ("African", "1T")
+display(elephant.dailyRoutine())
+
+// --------------------------------------
+
+class Dog extends Species{
+    constructor(name, kg){
+        super(name, kg)
+    }
+    
+    routin(){
+        return`${super.braking()} kjqwlijsbkdalihskduf`
+    }
+}
+
+const dog = new Dog ("Vucijak", "50kg")
+display(dog.routin())
