@@ -74,52 +74,95 @@
 
 // poliTicatri.da_li_je_na_vlasti()
 
-class Species{
-    constructor(name, kg){
-        this.name = name
-        this.kg = kg
-    }
-    wakeUp(){
-        return `${this.name} wake up in the morning.`;
-    }
-    eat(){
-        return `${this.name} they eat leaves, roots, tree bark, grass and fruit.`;
-    }
-    sleep(){
-        return `${this.name} they sleep at night.`;
-    }
-    braking(){
-        return`${this.name} every day.`
-    }
-}
+// class Species{
+//     constructor(name, kg){
+//         this.name = name
+//         this.kg = kg
+//     }
+//     wakeUp(){
+//         return `${this.name} wake up in the morning.`;
+//     }
+//     eat(){
+//         return `${this.name} they eat leaves, roots, tree bark, grass and fruit.`;
+//     }
+//     sleep(){
+//         return `${this.name} they sleep at night.`;
+//     }
+//     braking(){
+//         return`${this.name} every day.`
+//     }
+// }
 
-class Elephant extends Species{
-    constructor(name, kg){
-        super(name, kg)
-    }
+// class Elephant extends Species{
+//     constructor(name, kg){
+//         super(name, kg)
+//     }
 
-    dailyRoutine(){
-        return`${super.wakeUp()} then ${super.eat()} and then ${super.sleep()}.`
-    }
-}
+//     dailyRoutine(){
+//         return`${super.wakeUp()} then ${super.eat()} and then ${super.sleep()}.`
+//     }
+// }
 
-const display = (content) => {
-    console.log(content);
-}
-const elephant = new Elephant ("African", "1T")
-display(elephant.dailyRoutine())
+// const display = (content) => {
+//     console.log(content);
+// }
+// const elephant = new Elephant ("African", "1T")
+// display(elephant.dailyRoutine())
 
-// --------------------------------------
+// // --------------------------------------
 
-class Dog extends Species{
-    constructor(name, kg){
-        super(name, kg)
-    }
+// class Dog extends Species{
+//     constructor(name, kg){
+//         super(name, kg)
+//     }
     
-    routin(){
-        return`${super.braking()} kjqwlijsbkdalihskduf`
+//     routin(){
+//         return`${super.braking()} kjqwlijsbkdalihskduf`
+//     }
+// }
+
+// const dog = new Dog ("Vucijak", "50kg")
+// display(dog.routin())
+
+//VEZBA
+//Napraviti Klasu Vozilo koja ima boju, brzinu i model i tri metode
+//pokreni(), zaustavi(), promeniBrzinu()
+//Napraviti klasu Automobil koja nasledjuje klasu Vozilo
+//Klasa Automobil ima jedan novi properti: marka
+//Napraviti instancu za obe klase i pozvati metode i za Vozilo i Automobil
+
+class Vozilo{
+    constructor(colors, speed, model){
+        this.colors = colors
+        this.speed = speed
+        this.model = model
+    }
+    pokreni(){
+        console.log(`${this.model} color ${this.colors} it moves ${this.speed} at speed.`);
+    }
+    zaustavi(){
+        console.log(`${this.model} he stops in front of the store.`);
+    }
+    promeniBrzinu(){
+        console.log(`${this.model} it changes speed by stopping.`);
     }
 }
+  
+class Automobil extends Vozilo{
+    constructor(colors, speed, model, marka){
+        super(colors, speed, model)
+        this.marka = marka
+    }
 
-const dog = new Dog ("Vucijak", "50kg")
-display(dog.routin())
+    metoda(){
+        console.log(`Vozilo marke ${this.model}, model ${this.marka} islo je brzinom ${this.speed} i tim cinom prekrsio je zakon.`);
+    }
+}
+ 
+const automobil = new Automobil ("black", "260km/h", "520D", "BMW")
+automobil.metoda()
+
+const auto = new Vozilo("black", "260km/h", "BMW")
+auto.pokreni()
+auto.zaustavi()
+auto.promeniBrzinu() 
