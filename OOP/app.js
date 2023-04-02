@@ -131,38 +131,38 @@
 //Klasa Automobil ima jedan novi properti: marka
 //Napraviti instancu za obe klase i pozvati metode i za Vozilo i Automobil
 
-class Vozilo{
-    constructor(colors, speed, model){
-        this.colors = colors
-        this.speed = speed
-        this.model = model
-    }
-    pokreni(){
-        console.log(`${this.model} color ${this.colors} it moves ${this.speed} at speed.`);
-    }
-    zaustavi(){
-        console.log(`${this.model} he stops in front of the store.`);
-    }
-    promeniBrzinu(){
-        console.log(`${this.model} it changes speed by stopping.`);
-    }
-}
+// class Vozilo{
+//     constructor(colors, speed, model){
+//         this.colors = colors
+//         this.speed = speed
+//         this.model = model
+//     }
+//     pokreni(){
+//         console.log(`${this.model} color ${this.colors} it moves ${this.speed} at speed.`);
+//     }
+//     zaustavi(){
+//         console.log(`${this.model} he stops in front of the store.`);
+//     }
+//     promeniBrzinu(){
+//         console.log(`${this.model} it changes speed by stopping.`);
+//     }
+// }
   
-class Automobil extends Vozilo{
-    constructor(colors, speed, model, marka){
-        super(colors, speed, model)
-        this.marka = marka
-    }
+// class Automobil extends Vozilo{
+//     constructor(colors, speed, model, marka){
+//         super(colors, speed, model)
+//         this.marka = marka
+//     }
 
-    metoda(){
-        console.log(`Vozilo marke ${this.model}, model ${this.marka} islo je brzinom ${this.speed} i tim cinom prekrsio je zakon.`);
-    }
-}
+//     metoda(){
+//         console.log(`Vozilo marke ${this.model}, model ${this.marka} islo je brzinom ${this.speed} i tim cinom prekrsio je zakon.`);
+//     }
+// }
  
-const automobil = new Automobil ("black", "260km/h", "520D", "BMW")
-automobil.metoda()
+// const automobil = new Automobil ("black", "260km/h", "520D", "BMW")
+// automobil.metoda()
 
-const auto = new Vozilo("black", "260km/h", "BMW")
-auto.pokreni()
-auto.zaustavi()
-auto.promeniBrzinu() 
+// const auto = new Vozilo("black", "260km/h", "BMW")
+// auto.pokreni()
+// auto.zaustavi()
+// auto.promeniBrzinu()
